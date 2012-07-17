@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Screen Manager">
+      <UniqueIdentifier>{1077ac54-78cc-4a06-999d-0244f94c67cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Screens">
+      <UniqueIdentifier>{c607cb58-6bb7-4a38-b3bc-24248283c1c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Handlers">
+      <UniqueIdentifier>{db067c76-3ead-49b4-b1b9-347064c7d70c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{0b19c9bb-8198-4ce1-8638-57318843caa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics Engine">
+      <UniqueIdentifier>{1965ec2a-a608-4f76-8537-32c027e79543}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dropable Items">
+      <UniqueIdentifier>{a32c0240-c750-4bfa-b476-f82a16b75c7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World">
+      <UniqueIdentifier>{c4de132a-70ed-49b5-a845-834ba106f2d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lightning">
+      <UniqueIdentifier>{d9f4d5d0-8106-44b7-9ff9-e40e89745704}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model Loader">
+      <UniqueIdentifier>{f6d24631-12f8-4b69-8496-0d1180db14eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Particles">
+      <UniqueIdentifier>{c6b47669-fabe-424e-99a7-26ef874c8a8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{9c878589-5c03-4f7a-aff8-f9875e6db0ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound">
+      <UniqueIdentifier>{88e5e76a-5e3e-45c9-acf8-fecb64aa9e85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Save and Load">
+      <UniqueIdentifier>{a5ec5db9-10c6-41d6-9d29-ef4716f5f1eb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Screen.cpp">
+      <Filter>Screen Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenManager.cpp">
+      <Filter>Screen Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="TextHelper.cpp">
+      <Filter>Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureHelper.cpp">
+      <Filter>Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="AABoundingBox.cpp">
+      <Filter>Physics Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Md3.cpp">
+      <Filter>Model Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Model_3DS.cpp">
+      <Filter>Model Loader</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Screen.h">
+      <Filter>Screen Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenManager.h">
+      <Filter>Screen Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ExitScreen.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardHandler.h">
+      <Filter>Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseHandler.h">
+      <Filter>Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="TextHelper.h">
+      <Filter>Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="AllIncludes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WelcomingScreen.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="IDrawable.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="IntroductionScreen.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionsScreen.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureHelper.h">
+      <Filter>Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdPersonCamera .h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionDetectionHandler.h">
+      <Filter>Physics Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="AABoundingBox.h">
+      <Filter>Physics Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketManager.h">
+      <Filter>Dropable Items</Filter>
+    </ClInclude>
+    <ClInclude Include="Packets.h">
+      <Filter>Dropable Items</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="terrain.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Lightning</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Lightning</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="Md3.h">
+      <Filter>Model Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Particles.h">
+      <Filter>Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="Flame.h">
+      <Filter>Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="Skill.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScreen.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEngine.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundEngine.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveAndLoad.h">
+      <Filter>Save and Load</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadScreen.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveScreen.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadingScreen.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Model_3DS.h">
+      <Filter>Model Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="PauseScreen.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="temp.txt" />
+    <None Include="ClassDiagram2.cd" />
+  </ItemGroup>
+</Project>

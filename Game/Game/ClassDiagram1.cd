@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Screen" Collapsed="true">
+    <Position X="6" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAIAAAwAAACQAAAAAAAAAAIAAAAQAAAAgAkA=</HashCode>
+      <FileName>Screen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExitScreen" Collapsed="true">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAwAAACQEAAAEAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>ExitScreen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IDrawable" Collapsed="true">
+    <Position X="1.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>IDrawable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OptionsScreen" Collapsed="true">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OptionsScreen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WelcomingScreen" Collapsed="true">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAwAAACQEAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WelcomingScreen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyboardHandler" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACQAAAAgAgA=</HashCode>
+      <FileName>KeyboardHandler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MouseHandler" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAEAEA=</HashCode>
+      <FileName>MouseHandler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TextHelper" Collapsed="true">
+    <Position X="16.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIBAAAAAAAAAAAAAAAAAAAAAAAIAgAAAAAAA=</HashCode>
+      <FileName>TextHelper.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CVector3" Collapsed="true">
+    <Position X="18.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAQAAAAA=</HashCode>
+      <FileName>Main.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CVector2" Collapsed="true">
+    <Position X="15" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>Main.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameScreen" Collapsed="true">
+    <Position X="16.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAECAEAIIAIAABAgAABAAAAAAAQAiLAAAAAAAEAAAA=</HashCode>
+      <FileName>GameScreen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ThirdPersonCamera" Collapsed="true">
+    <Position X="22" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIAAAMAAAwABCEAAQIAAAAASgAAIgDAAAIBABDGIQM=</HashCode>
+      <FileName>ThirdPersonCamera .h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AABoundingBox" Collapsed="true">
+    <Position X="16.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEAAAAAQAAAgAFAAAABIAAA=</HashCode>
+      <FileName>AABoundingBox.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionDetectionHandler" Collapsed="true">
+    <Position X="20.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CollisionDetectionHandler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PacketsManager" Collapsed="true">
+    <Position X="20.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAACABAAAAABAAAAAAAQAAAAAA=</HashCode>
+      <FileName>PacketManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Packet" Collapsed="true">
+    <Position X="8.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAFAgAABAACA=</HashCode>
+      <FileName>Packets.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthPacket" Collapsed="true">
+    <Position X="8.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Packets.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManaPacket" Collapsed="true">
+    <Position X="7.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Packets.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmmoPacket" Collapsed="true">
+    <Position X="9.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Packets.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Terrain" Collapsed="true">
+    <Position X="20.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAhEACCQAACAIAAAAAAAAgAAEAAMABIYQAgAA=</HashCode>
+      <FileName>terrain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="World" Collapsed="true">
+    <Position X="15" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAhBAAAgAEAAAAAAQAQAAAAgAAIAAAAABAAAA=</HashCode>
+      <FileName>World.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Light" Collapsed="true">
+    <Position X="20.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAAAAAAAABBAAAgAAAAAAAAgAAAAAAAAAACA=</HashCode>
+      <FileName>Light.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Material" Collapsed="true">
+    <Position X="18.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAACAAAAAAAIAACAAAAAAAAAAAAAEAAAAAQAAAAI=</HashCode>
+      <FileName>Material.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLoadMD3" Collapsed="true">
+    <Position X="15" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAARGAAAAAAAACAACAAAQoAAACAAQAAAAAEEAAAAA=</HashCode>
+      <FileName>Md3.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CModelMD3" Collapsed="true">
+    <Position X="22" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAAAAMAgCQAUAAAAAIAEAAECQAAEEACCBAOgAgAAg=</HashCode>
+      <FileName>Md3.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CQuaternion" Collapsed="true">
+    <Position X="16.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAABAAAAAAAhgBQAAAgA=</HashCode>
+      <FileName>Md3.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flame" Collapsed="true">
+    <Position X="22" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAABAAAAgAgAAAAAAAAQAAAAgEAAAAAAIAAIAA=</HashCode>
+      <FileName>Flame.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Particle" Collapsed="true">
+    <Position X="22" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAJAAABAAAAACgAAAAkAAQgQAAAgAgCAAgAAACABAAA=</HashCode>
+      <FileName>Particles.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bullet" Collapsed="true">
+    <Position X="16.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAABAAAAAAAAAQAAAAAAAAAAAAABAABABAABQAAA=</HashCode>
+      <FileName>Bullet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player" Collapsed="true">
+    <Position X="3.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEgAAgACACgoAgQAwIECEBQIAAAgiIAQAgCQAIAAI=</HashCode>
+      <FileName>Player.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemy" Collapsed="true">
+    <Position X="2" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KAQEAkCAACAAAgFCSAwAABCggIGIAUCIRASBRCRAAQI=</HashCode>
+      <FileName>Player.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NormalEnemy" Collapsed="true">
+    <Position X="1" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAgAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Player.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss" Collapsed="true">
+    <Position X="3.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAgAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Player.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hero" Collapsed="true">
+    <Position X="4.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAaEggtisqAgklFAQoWqWAUhAoGMJAIKUAAgDAAAAgA=</HashCode>
+      <FileName>Player.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skill" Collapsed="true">
+    <Position X="17.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAABJAQAgEgBFAAAAAEACAAABAQACICAAAIEAAAAg=</HashCode>
+      <FileName>Skill.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SniperSkill" Collapsed="true">
+    <Position X="17.25" Y="1" Width="1.5" />
+    <InheritanceLine Type="Skill">
+      <InheritanceModifierLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.171" Y="0.622" Height="0.156" Width="0.894" />
+      </InheritanceModifierLabel>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAEECAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Skill.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SlowMotionSkill" Collapsed="true">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAEACAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Skill.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HiddenSkill" Collapsed="true">
+    <Position X="13.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAEBCAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Skill.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BuffSkill" Collapsed="true">
+    <Position X="15.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAEACAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Skill.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VampireAuraSkill" Collapsed="true">
+    <Position X="17" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAEACAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Skill.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LightningSkill" Collapsed="true">
+    <Position X="18.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAQAAAAAAAAAAAEACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Skill.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UpgradeSkill" Collapsed="true">
+    <Position X="20.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAQAAAAAAAAAAAEACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Skill.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StormSkill" Collapsed="true">
+    <Position X="22.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAEACQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Skill.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoundClass" Collapsed="true">
+    <Position X="16.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAACAAAAAARCAAAAEAQAAQAAAAAAEAAAAAAABQgA=</HashCode>
+      <FileName>Sound.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoundEngine" Collapsed="true">
+    <Position X="18.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAQAAAAAAQAIUAAAQAAAAAAAEAAAAAAAQAAgAAAA=</HashCode>
+      <FileName>SoundEngine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveAndLoad" Collapsed="true">
+    <Position X="15" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAABAAAAAAAAAE=</HashCode>
+      <FileName>SaveAndLoad.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScreenManager" Collapsed="true">
+    <Position X="1.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIFAAAAAAIAAEQAAECAIAAIAQQAAKoQABAQAAAAgAkA=</HashCode>
+      <FileName>ScreenManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IntroductionScreen" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAwAAACQkBAAEACAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>IntroductionScreen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="MenuItems" Collapsed="true">
+    <Position X="15" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>IntroductionScreen.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tagPCXHEADER" Collapsed="true">
+    <Position X="22" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAIAAAABEQIYAAAAAAIAAIAAIAAEApgAABCAAA=</HashCode>
+      <FileName>TextureHelper.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tagTGAHEADER" Collapsed="true">
+    <Position X="20.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEIIAQAAAAAQACAAAAgAAAAAAAAAQAABAYAAAAAQAA=</HashCode>
+      <FileName>TextureHelper.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tagBGRAQUAD" Collapsed="true">
+    <Position X="18.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAABQAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>TextureHelper.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tFace" Collapsed="true">
+    <Position X="22" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Main.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tMaterialInfo" Collapsed="true">
+    <Position X="16.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAACEgAAAAIACAAAAAIAIAAAA=</HashCode>
+      <FileName>Main.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="t3DObject" Collapsed="true">
+    <Position X="18.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAABAAAAARAAAAAAgQIAAFAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Main.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tAnimationInfo" Collapsed="true">
+    <Position X="20.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAIBgAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Main.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="t3DModel" Collapsed="true">
+    <Position X="16.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAwAAAAIAAAAAgAAAABAKEAQACYAIAAAAAA=</HashCode>
+      <FileName>Main.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="coordinate" Collapsed="true">
+    <Position X="15" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAAAA=</HashCode>
+      <FileName>terrain.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Vector3" Collapsed="true">
+    <Position X="22" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAQEAAAIAAFAgAEAIAAQAAAAAAAAAAAABgAUFAAAA=</HashCode>
+      <FileName>Vector3.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tMd3Header" Collapsed="true">
+    <Position X="20.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAACAAAEgAAAAAAAAAAAABABAIIAAEBgAAAAAAAAA=</HashCode>
+      <FileName>Md3.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tMd3MeshInfo" Collapsed="true">
+    <Position X="22" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgEAwAAAAAgAAAAAAAIAAAAgAAAAJAAAAAAAAAhAAAA=</HashCode>
+      <FileName>Md3.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tMd3Tag" Collapsed="true">
+    <Position X="15" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAgAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Md3.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tMd3Bone" Collapsed="true">
+    <Position X="16.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAgAAAAAAAAAAAIAACAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Md3.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tMd3Triangle" Collapsed="true">
+    <Position X="20.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Md3.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tMd3Face" Collapsed="true">
+    <Position X="18.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Md3.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tMd3TexCoord" Collapsed="true">
+    <Position X="18.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Md3.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tMd3Skin" Collapsed="true">
+    <Position X="15" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Md3.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="PCXHEADER" Collapsed="true">
+    <Position X="22" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TextureHelper.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PPCXHEADER" Collapsed="true">
+    <Position X="22" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TextureHelper.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="TGAHEADER" Collapsed="true">
+    <Position X="20.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TextureHelper.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PTGAHEADER" Collapsed="true">
+    <Position X="20.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TextureHelper.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="BGRAQUAD" Collapsed="true">
+    <Position X="18.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TextureHelper.h</FileName>
+    </TypeIdentifier>
+    <AliasOfLine Type="tagBGRAQUAD" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="19.25" Y="11" />
+        <Point X="19.25" Y="10.884" />
+        <Point X="19.25" Y="10.884" />
+        <Point X="19.25" Y="10.769" />
+      </Path>
+    </AliasOfLine>
+  </Typedef>
+  <Typedef Name="PBGRAQUAD" Collapsed="true">
+    <Position X="18.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TextureHelper.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="TORSO" Collapsed="true">
+    <Position X="18.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEJAQAAAgABIAjAAEAuAQAAAAAAAE4gACAABEAAAA=</HashCode>
+      <FileName>Md3.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EnemyState" Collapsed="true">
+    <Position X="16.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Player.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EnemyDirection" Collapsed="true">
+    <Position X="15" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAgAIAAAAAAAAA=</HashCode>
+      <FileName>Player.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Ubuntu" Size="9" />
+</ClassDiagram>

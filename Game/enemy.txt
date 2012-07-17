@@ -1,0 +1,397 @@
+class Enemy : public Player
+{
+public:
+	int evasion_speed ;
+	int State;
+	bool ReadyTofire;
+	Vector3 InitialPosition;
+	int AttackRange;
+	int SightRange;
+	int MoveRange;
+	float MoveValue;
+	bool reachedMaxRange;
+	bool MovementDone;
+	int moveDirection;
+	Vector3 Normal;
+	Vector3 Right;
+	Vector3 Up;
+	int EnemyRight;
+	int EnemyDepth;
+	int Time;
+	bool NotInHisPlace;
+	bool isDone;
+	bool firstDeath;
+	int bulletSpeed;
+	int timeAfterDeath;
+	int bullets_fired;
+	float rotation_manuvering;
+	int enemy_movement;
+	Vector3 d;
+	Enemy():Player()
+	{
+		State = EnemyState::IDLE;
+		firstDeath = false;
+		isDone = false;
+		Dead = false;
+		reachedMaxRange = false;
+		MovementDone = true;
+		Speed = 20;
+		bulletSpeed = 40;
+		moveDirection = 1;
+		Position.x = 0;
+		Position.z = 0;
+		Position.y = 0;
+		InitialPosition.x = 0;
+		InitialPosition.y = 0;
+		InitialPosition.z = 0;
+		Rotation = 0 ;
+		InitialLookDirection.x = 1;
+		InitialLookDirection.y = 0;
+		InitialLookDirection.z = 0;
+		Up.x = 0;
+		Up.y = 1;
+		Up.z = 0;
+		timeAfterDeath = 0;
+		NotInHisPlace = false;
+		Visible = true;
+		evasion_speed=10;
+		bullets_fired=0;
+		rotation_manuvering=0;
+		enemy_movement=0;
+		d=Vector3();
+	}
+	bool IsPlayerInSightRange(int x,int z)
+	{
+		if(!Visible)
+			return false;
+		if(x > (Position.x + EnemyRight - SightRange) && x < (Position.x + EnemyRight + SightRange) && z > (Position.z + EnemyDepth - SightRange) && z < (Position.z + EnemyDepth + SightRange))
+			return true;
+		else
+			return false;
+	}
+	void CheckIfPlayerInRange(int x,int z)
+	{
+		if(IsPlayerInSightRange(x,z))
+		{
+			State = EnemyState::CHASING;
+			CalculateFaceAngle(x,z);
+		}
+		else
+		{
+			State = EnemyState::IDLE;
+		}
+	}
+	int temp;
+	void SetPlayerPosition(int x,int z)
+	{
+		EnemyRight = x;
+		EnemyDepth = z;
+	}
+	// cos(ceta) = A.B/|A|*|B|
+	void CalculateFaceAngle(int x, int z)
+	{
+		Vector3 PlayerPos(x-EnemyRight,0,z-EnemyDepth);
+		Vector3 N = PlayerPos-Position;
+		N.Normalize();
+		float NMagnitude = N.Magnitude();
+		float EMagnitude = InitialLookDirection.Magnitude();
+		float Res = N.x*InitialLookDirection.x+N.y*InitialLookDirection.y+N.z*InitialLookDirection.z;
+		float Ceta = Res/(NMagnitude*EMagnitude);
+		if(z > Position.z+EnemyDepth)
+			SetRotation(-(180/3.14157)*acos(Ceta));
+		else
+			SetRotation((180/3.14157)*acos(Ceta));
+	}
+	bool Update()
+	{
+		if(HP <= 0 && !Dead)
+		{
+			Die();
+			Dead = true;
+			isDone = true;
+		}
+		if(Dead && !isDone)
+		{
+			Die();
+			isDone = true;
+		}
+		if(!Dead)
+		{
+			UpdateBullets();
+			CheckIfPlayerInRange(Target.x,Target.z);
+			if(State == EnemyState::IDLE)
+			{
+				if(NotInHisPlace)
+					returnToInitialPosition();
+				else
+					MoveFreely();
+			}
+			else
+			{
+				NotInHisPlace = true;
+				Chase(Target.x,Target.z);
+			}
+		}
+		else
+			timeAfterDeath++;
+		Draw();
+		model.UpdateLowerModel();
+		model.UpdateUpperModel();
+		return isDone;
+	}
+	void Chase(int x,int z)
+	{
+		Vector3 PlayerPos(x-EnemyRight,0,z-EnemyDepth);
+		Vector3 N = PlayerPos-Position; 
+		float Distance = N.Magnitude();
+		N.Normalize();
+		if(Distance > AttackRange)
+		{
+			
+			rotation_manuvering=0;
+			if(model.GetTorsoCurrentAnimation() != TORSO_STAND)
+			{
+				model.SetTorsoAnimation(TORSO_STAND);
+			}
+			if(model.GetLegsCurrentAnimation() != LEGS_WALK-7)
+			{
+				model.SetLegsAnimation("LEGS_WALK");
+			}
+			Position += N*Speed;
+		}
+		else
+		{
+				if(enemy_movement==3[)
+				{
+					bullets_fired=0;
+					enemy_movement=0;
+				}
+				if(bullets_fired==1)
+				{
+					zawel_el_player(Vector3(x,0,z),N);
+					enemy_movement++;	
+				}
+			
+			ReadyTofire = false;
+			Time++;
+			if(!(Time%100))
+			{
+				
+
+				bullets_fired++;
+				Attack();
+				ShootAt();
+				Time = 0;
+			
+			}
+		}
+	}
+	void returnToInitialPosition()
+	{
+		Vector3 N = InitialPosition-Position; 
+		CalculateFaceAngle(InitialPosition.x+EnemyRight,InitialPosition.z+EnemyDepth);
+		float Distance = N.Magnitude();
+		N.Normalize();
+		if(Distance > 1)
+		{
+			if(model.GetTorsoCurrentAnimation() != TORSO_STAND)
+			{
+				model.SetTorsoAnimation(TORSO_STAND);
+			}
+			if(model.GetLegsCurrentAnimation() != LEGS_WALK-7)
+			{
+				model.SetLegsAnimation("LEGS_WALK");
+			}
+			Position += N*Speed;
+		}
+		else
+		{
+			NotInHisPlace = false;
+		}
+	}
+	void Attack()
+	{
+		model.SetTorsoAnimation(TORSO_ATTACK);
+		model.SetLegsAnimation("LEGS_IDLE");
+	}
+	void MoveForward()
+	{
+		if(!MovementDone)
+		{
+			if(MoveValue > MoveRange)
+				reachedMaxRange = true;
+			if(MoveValue < 0)
+			{
+				reachedMaxRange = false;
+				MovementDone = true;
+			}
+			if(!reachedMaxRange)
+			{
+				Rotation = 90;
+				MoveValue+= Speed;
+				Position.z -= Speed;
+			}
+			else
+			{
+				Rotation = -90;
+				MoveValue-= Speed;
+				Position.z += Speed;
+			}
+		}
+	}
+	void MoveBackward()
+	{
+		if(!MovementDone)
+		{
+			if(MoveValue > MoveRange)
+				reachedMaxRange = true;
+			if(MoveValue < 0)
+			{
+				reachedMaxRange = false;
+				MovementDone = true;
+			}
+			if(!reachedMaxRange)
+			{
+				Rotation = -90;
+				MoveValue+= Speed;
+				Position.z += Speed;
+			}
+			else
+			{
+				Rotation = 90;
+				MoveValue-= Speed;
+				Position.z -= Speed;
+			}
+		}
+	}
+	void MoveLeft()
+	{
+		if(!MovementDone)
+		{
+			if(MoveValue > MoveRange)
+				reachedMaxRange = true;
+			if(MoveValue < 0)
+			{
+				reachedMaxRange = false;
+				MovementDone = true;
+			}
+			if(!reachedMaxRange)
+			{
+				Rotation = 180;
+				MoveValue+= Speed;
+				Position.x -= Speed;
+			}
+			else
+			{
+				Rotation = 0;
+				MoveValue-= Speed;
+				Position.x += Speed;
+			}
+		}
+	}
+	void MoveRight()
+	{
+		if(!MovementDone)
+		{
+			if(MoveValue > MoveRange)
+				reachedMaxRange = true;
+			if(MoveValue < 0)
+			{
+				reachedMaxRange = false;
+				MovementDone = true;
+			}
+			if(!reachedMaxRange)
+			{
+				Rotation = 0;
+				MoveValue+= Speed;
+				Position.x += Speed;
+			}
+			else
+			{
+				Rotation = 180;
+				MoveValue-= Speed;
+				Position.x -= Speed;
+			}
+		}
+	}
+	void MoveFreely()
+	{		
+		if(MovementDone)
+		{
+			moveDirection = rand()%4;
+			MovementDone = false;
+		}
+		switch(moveDirection)
+		{
+		case EnemyDirection::FORWARD:
+			MoveForward();
+			break;
+		case EnemyDirection::BACKWARD:
+			MoveBackward();
+			break;
+		case EnemyDirection::LEFT:
+			MoveLeft();
+			break;
+		case EnemyDirection::RIGHT:
+			MoveRight();
+			break;
+		}
+	}
+	Vector3 GetPosition()
+	{
+		return Vector3(Position.x+EnemyRight,0,Position.z+EnemyDepth); 
+	}
+	AABoundingBox GetAABB() const {
+		Vector3 dims(5, 5, 5);
+		Vector3 P(Position.x+EnemyRight,-18,Position.z+EnemyDepth);
+		return AABoundingBox(P, 2*dims);
+	}
+	void ShootAt() {
+		Target.y = 0;
+		Vector3 bulDir = (Target - GetPosition());
+		bulDir.Normalize();
+		Bullet bul(Vector3(GetPosition().x,-18,GetPosition().z), bulletSpeed * bulDir);
+		Bullets.push_back(bul);
+	}
+	void Draw()
+	{
+		glLoadIdentity();
+		glTranslatef(EnemyRight+Position.x,-18,EnemyDepth+Position.z);
+		glRotatef(Rotation,0,1,0);
+	}
+	void Maneuver()
+	{
+		switch(rand()%5)
+		{
+		case 0: Position.x+=evasion_speed;
+			break;
+		case 1: Position.x-=evasion_speed;
+			break;
+		case 2: Position.z+=evasion_speed;
+			break;
+		case 3: Position.z-=evasion_speed;
+			break;
+		case 4:
+			break;
+		}
+		//model.SetLegsAnimation(1);
+		
+	}
+	void zawel_el_player(Vector3 player_pos,Vector3 d)
+	{
+		d.Normalize();
+		d.RotateAround(0.001,Vector3(0,1,0));
+		Vector3 P = player_pos - d*AttackRange;
+		EnemyDepth = P.z;
+		EnemyRight = P.x;
+		//rotation_manuvering+=0;
+		//player_pos.Normalize();
+		//Position.RotateAround(rotation_manuvering,player_pos);
+		//Position=Position.RotateVector(player_pos,rotation_manuvering,Vector3(0,1,0));
+
+		//glRotated(190,1,0,0);
+		//function circular  center player_pos radius AttackRange
+		
+		
+	}
+};
